@@ -1,0 +1,24 @@
+Module 2 Activity: TDD
+
+Group Members:
+Ayan Chowdhury
+Benjamin Wakefield
+Emily Gringorten
+
+Write down the testable behaviors for the satisfaction condition "Add a new grade for an existing student"
+
+addGrade should add the correct grade for the specified student in the specified course
+addGrade should add a new grade for a student ONLY if the student already exists in the database
+
+Identify at least two exceptional conditions or design decisions associated with these testable behaviors
+
+If a grade already exists for the student in the specified course, overwrite the existing grade
+If the course does not already exist in the student's transcript, add a new course and grade
+If the new grade is less than 0 or greater than 100, throw an error
+If the student does not already exist in the database, throw an error
+If the specified Course does not match the course contained in CourseGrade, throw an error
+
+Design Changes
+
+addGrade and getGrade signatures were modified to take a StudentID, rather than a Student, in accordance with the
+functions that have already been implemented
